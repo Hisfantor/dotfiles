@@ -18,9 +18,7 @@ general {
 
 order += "volume master"
 order += "disk /"
-order += "ethernet enx00e04c68c15c"
-order += "wireless _first_"
-order += "battery all"
+order += "ethernet enp4s0"
 order += "cpu_usage"
 
 order += "tztime local"
@@ -30,22 +28,9 @@ volume master {
 	format_muted = ""
 }
 
-ethernet enx00e04c68c15c {
+ethernet enp4s0 {
 	format_up = "E:%ip[%speed]"
 	format_down = "E: down"
-}
-
-wireless _first_ {
-        format_up = "%quality[%bitrate]   %essid [%ip]"
-        format_down = ""
-}
-
-battery all {
-        format = "%status [%percentage] %remaining[%consumption]"
-	status_chr = ""
-	status_bat = ""
-	low_threshold= 15
-	threshold_type = time
 }
 
 tztime local {
@@ -60,5 +45,5 @@ cpu_usage {
 
 
 disk "/" {
-        format = "%total - %avail = %free"
+        format = "%free"
 }
