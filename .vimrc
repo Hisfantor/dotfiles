@@ -11,3 +11,4 @@ autocmd FocusLost * silent! wall	"autosave if focus is lost
 
 set clipboard=unnamedplus " not working
 
+
