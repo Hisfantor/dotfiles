@@ -1,3 +1,4 @@
+
 filetype plugin on	"for MD preview
 set number 		"for current line number
 set relativenumber	"relative numbers except current line
