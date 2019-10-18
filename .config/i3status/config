@@ -10,17 +10,18 @@
 general {
         colors = true
         interval = 1
-	color_good = "#00a941"
-	color_bad = "#b2302d"
-	color_degraded = "#00599d"
+	color_good = "#50fa7b"
+	color_bad = "#ff5555"
+	color_degraded = "#ffb86c"
 	output_format = "i3bar"
 }
 
 order += "volume master"
 order += "disk /"
-order += "ethernet enp4s0"
+order += "ethernet enx00e04c68c15c"
+order += "wireless _first_"
+order += "battery all"
 order += "cpu_usage"
-
 order += "tztime local"
 
 volume master {
@@ -28,9 +29,22 @@ volume master {
 	format_muted = ""
 }
 
-ethernet enp4s0 {
-	format_up = "E:%ip[%speed]"
-	format_down = "E: down"
+ethernet enx00e04c68c15c {
+	format_up = "E:%ip"
+	format_down = ""
+}
+
+wireless _first_ {
+        format_up = "  %quality %essid [%ip]"
+        format_down = ""
+}
+
+battery all {
+        format = "%status [%percentage] %remaining"
+	status_chr = ""
+	status_bat = ""
+	low_threshold= 15
+	threshold_type = time
 }
 
 tztime local {
@@ -43,7 +57,6 @@ cpu_usage {
 	format_above_threshold = " %usage"
 }
 
-
 disk "/" {
-        format = "%free"
+        format = "%avail free"
 }

@@ -1,12 +1,6 @@
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! User: Rasi
-! Copyright: Rasmus Steinke
-! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-!                   bg       fg      bg-alt   hl-alt   hl-fg
-rofi.color-window: #011116, #384451, #011116
-rofi.color-normal: #011116, #405555, #022026, #384451, #011116
-rofi.color-active: #011116, #405555, #022026, #384451, #011116
-rofi.color-urgent: #011116, #405555, #022026, #384451, #011116
-
+rofi.hide-scrollbar:true
+rofi.color-window: #44475a, #f1fa8c, #f1fa8c
+rofi.color-normal: #44475a, #8BE9FD, #282a36, #6272a4, #FF7AC6
+rofi.color-active: #f1fa8c, #44475a, #8BE9FD, #6272a4, #FF7AC6
+rofi.color-urgent: #f1fa8c, #44475a, #8BE9FD, #6272a4, #FF7AC6
